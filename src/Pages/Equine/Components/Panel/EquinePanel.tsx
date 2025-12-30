@@ -8,6 +8,7 @@ import img4 from "../../../../media/equine/4.jpg"
 import img5 from "../../../../media/equine/5.jpg"
 import img6 from "../../../../media/equine/6.jpg"
 import {Portal} from "../../../../Components/General/Portal/Portal";
+import {useEffect, useState} from "react";
 
 
 const images: TMasonryItem[] = [{
@@ -43,6 +44,16 @@ const images: TMasonryItem[] = [{
 }]
 
 export const EquinePanel = () => {
+
+    const [data, setData] = useState<TMasonryItem[]>([])
+
+    useEffect(() => {
+        setTimeout(() => setData([...data]), 1000)
+
+        return () => {
+            setData([])
+        }
+    }, [])
 
     return (
         <Portal id={"panel-glass"}>
