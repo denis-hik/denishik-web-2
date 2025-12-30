@@ -39,4 +39,13 @@ export const PanelStyled = styled.div`
             flex-direction: row;
         }
     }
+    
+    @media (max-width: 767px) {
+        .glass-surface {
+            min-width: unset;
+            transition: all 0.3s ease-in-out;
+            width: 90% !important;
+            height: 45px !important;
+        }
+    }
 `

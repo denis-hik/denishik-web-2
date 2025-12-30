@@ -29,4 +29,15 @@ export const NavBarStyled = styled.div `
             mix-blend-mode: unset;
         } 
     }
+
+
+    @media (max-width: 767px) {
+        li {
+            a {
+                height: 100%;
+                display: flex !important;
+                align-items: center;
+            }
+        }
+    }
 `
