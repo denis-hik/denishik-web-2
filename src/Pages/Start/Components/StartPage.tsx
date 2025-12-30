@@ -1,4 +1,4 @@
-import start from "../../../media/start.jpg";
+import start from "../../../media/start2.jpg";
 import {LayeredParallaxBackground} from "../../../Components/public/BachgroundParalax/BackgroundParalax";
 import {StartPageStyled} from "./styled";
 import {useCallback, useState} from "react";

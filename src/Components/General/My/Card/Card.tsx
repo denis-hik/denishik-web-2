@@ -18,9 +18,15 @@ interface CardProps extends SpotlightCardProps {
 }
 
 export const Card = ({image, imageProps, description, icon, onClick, isBlank, ...props}: CardProps) => {
+    const [hover, setHover] = React.useState(false)
 
 
-    return (<CardStyled onClick={onClick}>
+
+    return (<CardStyled
+        onClick={onClick}
+        onMouseOver={() => setHover(true)}
+        onMouseOut={() => setHover(false)}
+    >
         <SpotlightCard
             className={"card"}
             spotlightColor={"#cdcdcd"}
@@ -35,6 +41,7 @@ export const Card = ({image, imageProps, description, icon, onClick, isBlank, ..
                 overlaySize={"cover"}
                 overlayWidth={"120%"}
                 overlayHeight={"120%"}
+                motionMode={hover ? "auto" : "gyro" }
                 overlayPosition={"center"}
                 {...imageProps}
             />}

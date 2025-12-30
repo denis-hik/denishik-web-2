@@ -12,13 +12,16 @@ export const NavBarStyled = styled.div `
     &.active:not(.exp) {
         overflow: hidden;
         
-        a {
-            filter: invert(1);
-            mix-blend-mode: difference;
-        } 
+        .effect {
+            opacity: 0;
+        }
     }
     &.active.exp {
         overflow: hidden;
+
+        .effect {
+            opacity: 0;
+        }
         
         a {
             display: inline-block !important;
