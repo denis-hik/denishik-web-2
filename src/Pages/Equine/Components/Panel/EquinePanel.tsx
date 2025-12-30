@@ -48,7 +48,7 @@ export const EquinePanel = () => {
     const [data, setData] = useState<TMasonryItem[]>([])
 
     useEffect(() => {
-        setTimeout(() => setData([...data]), 1000)
+        setTimeout(() => setData(images), 300)
 
         return () => {
             setData([])
@@ -58,8 +58,8 @@ export const EquinePanel = () => {
     return (
         <Portal id={"panel-glass"}>
             <EquinePanelStyled>
-                <Masonry
-                    items={images}
+                {!!data?.length && <Masonry
+                    items={data}
                     ease="power3.out"
                     duration={0.6}
                     stagger={1}
@@ -68,7 +68,7 @@ export const EquinePanel = () => {
                     hoverScale={0.95}
                     blurToFocus={true}
                     colorShiftOnHover={false}
-                />
+                />}
             </EquinePanelStyled>
         </Portal>
     )

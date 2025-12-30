@@ -14,7 +14,7 @@ const data = [{
     label: "Gumroad",
     description: "Gumroad",
     image: block1,
-    href: "https://www.gumroud.com/",
+    href: "https://denishik.gumroad.com/",
 },{
     label: "VRChat",
     description: "VRChat",

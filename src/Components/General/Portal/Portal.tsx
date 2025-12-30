@@ -18,5 +18,5 @@ export const Portal: React.FC<IPortalProps> = ({children, id}) => {
             return null
 
         return createPortal(children, ref)
-    }, [ref])
+    }, [ref, children])
 }
