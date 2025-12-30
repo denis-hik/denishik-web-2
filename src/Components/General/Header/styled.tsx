@@ -67,4 +67,10 @@ export const HeaderStyled = styled.div`
             opacity: 0;
         }
     }
+    
+    @media (min-aspect-ratio: 21/9) {
+        &.hide.active {
+            top: 10px;
+        }
+    }
 `
