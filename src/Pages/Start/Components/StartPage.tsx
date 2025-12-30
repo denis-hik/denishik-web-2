@@ -3,6 +3,7 @@ import {LayeredParallaxBackground} from "../../../Components/public/BachgroundPa
 import {StartPageStyled} from "./styled";
 import {useCallback, useState} from "react";
 import {Motion} from "./Motion/Motion";
+import {Label} from "./Label/LabelStartPage";
 
 export const StartPage = () => {
     const [requestMotion, setRequestMotion] = useState<null | (() => Promise<boolean>)>(null);
@@ -29,6 +30,7 @@ export const StartPage = () => {
                 onRequestGyroPermission={(e) => setRequestMotion(() => e)}
             />
             {!!requestMotion && <Motion onClick={handleMotion}/>}
+            <Label />
         </StartPageStyled>
     )
 }

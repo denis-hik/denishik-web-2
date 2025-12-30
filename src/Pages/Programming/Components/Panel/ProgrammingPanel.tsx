@@ -50,7 +50,7 @@ const icons = [{
 },{
     node: SiRedux,
     title: "MuiUI",
-    href: "https://mui.com/material-ui"
+    href: "https://redux-toolkit.js.org"
 }].map(item => ({
     ...item,
 // @ts-ignore
@@ -90,7 +90,7 @@ export const ProgrammingPanel = () => {
     }, [])
 
     const onClickLogo = useCallback((item: LogoItem) => {
-        !item?.href?.length && window.open(item.href, "_blank");
+        !!item?.href?.length && window.open(item.href, "_blank");
     }, [])
 
     return (
