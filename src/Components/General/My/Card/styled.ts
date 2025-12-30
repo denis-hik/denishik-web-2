@@ -9,7 +9,6 @@ export const CardStyled = styled.div`
     width: 95%;
     border-radius: 15px;
 
-
     *, :before, :after {
         box-sizing: border-box;
     }

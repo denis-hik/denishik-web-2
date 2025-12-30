@@ -6,7 +6,7 @@ import {ExperienceBody} from "./Components/Body/ExperienceBody";
 export const ExperiencePage = () => {
 
     return (
-        <ExperiencePageStyled>
+        <ExperiencePageStyled className={"scrl"}>
             <LayeredParallaxBackground
                 overlayImageSrc={experience}
                 maxOffset={20}

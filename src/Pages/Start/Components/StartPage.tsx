@@ -19,7 +19,7 @@ export const StartPage = () => {
     }, [requestMotion])
 
     return (
-        <StartPageStyled>
+        <StartPageStyled className={"scrl"}>
             <LayeredParallaxBackground
                 overlayImageSrc={start}
                 maxOffset={20}

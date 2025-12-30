@@ -16,6 +16,7 @@ export const BaseLayer = styled.div`
 export const OverlayWrap = styled.div`
   position: absolute;
   inset: 0;
+  background-color: black;
   display: grid;
   place-items: center;
 `;

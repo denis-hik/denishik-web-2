@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import Router from "./Components/General/Route/router";
 import NavBar from "./Components/General/NavBar/NavBar";
 import {Panel} from "./Components/General/Panel/Panel";
