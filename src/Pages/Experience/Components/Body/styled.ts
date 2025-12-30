@@ -97,4 +97,17 @@ export const ExperienceBodyStyled = styled.div`
             }
         }
     }
+
+    @media (max-width: 767px) {
+        top: unset;
+        bottom: 10vh;
+        
+        .list {
+            .item {
+                &.active {
+                    height: 15vh !important;
+                }
+            }
+        }
+    }
 `

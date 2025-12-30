@@ -33,5 +33,12 @@ export const ProgrammingStyled = styled.div`
     &.active {
         opacity: 1;
     }
+
+
+    @media (min-aspect-ratio: 21/9) {
+        .list {
+            flex-direction: row;
+        }
+    }
     
 `

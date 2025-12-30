@@ -29,4 +29,14 @@ export const PanelStyled = styled.div`
     }
     
     width: 100%;
+
+    @media (min-aspect-ratio: 21/9) {
+        &.active {
+            top: 93vh;
+            height: 50%;
+        }
+        .list {
+            flex-direction: row;
+        }
+    }
 `
