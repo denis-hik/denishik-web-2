@@ -27,7 +27,7 @@ export const ExperienceBody = () => {
 
     return (
         <ExperienceBodyStyled>
-            <div className="list">
+            <div className={`list ${show !== -1 ? "selected" : "" }`}>
                 {data.map((item, index) => (
                     <GlassSurface
                         mixBlendMode={"difference"}

@@ -12,6 +12,8 @@ export const ExperienceBodyStyled = styled.div`
         flex-direction: column;
         gap: 1rem;
         
+        
+        
         .item {
             width: 100% !important;
             height: 80px !important;
@@ -104,8 +106,27 @@ export const ExperienceBodyStyled = styled.div`
         
         .list {
             .item {
+                .content {
+                    height: 0;
+                    
+                    align-items: center;
+                    
+                    .position, .date {
+                        justify-content: center !important;
+                    }
+                    
+                    p {
+                        transition: unset;
+                    }
+                }
+                
+                & > div {
+                    flex-direction: column;
+                }
+                
+                
                 &.active {
-                    height: 15vh !important;
+                    height: 20vh !important;
                 }
             }
         }
