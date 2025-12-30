@@ -29,8 +29,8 @@ export const StartPage = () => {
                 overlayPosition={"left"}
                 onRequestGyroPermission={(e) => setRequestMotion(() => e)}
             />
-            {!!requestMotion && <Motion onClick={handleMotion}/>}
             <Label />
+            {!!requestMotion && <Motion onClick={handleMotion}/>}
         </StartPageStyled>
     )
 }
