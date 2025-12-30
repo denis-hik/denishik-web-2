@@ -208,7 +208,7 @@ export function LayeredParallaxBackground({
 
             {overlayImageSrc ? (
                 <OverlayWrap>
-                    <OverlayLayer ref={layerRef} style={overlayStyle} />
+                    <OverlayLayer className={"overlay"} ref={layerRef} style={overlayStyle} />
                 </OverlayWrap>
             ) : null}
         </Root>
