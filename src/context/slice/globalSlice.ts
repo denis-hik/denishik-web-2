@@ -8,11 +8,15 @@ const globalSlice = createSlice({
     initialState: globalSliceInitialState,
     reducers: {
         clear: (state) => ({...globalSliceInitialState}),
+        setResume(state,action: PayloadAction<string>){
+            state.resume.state = "succeeded"
+            state.resume.data = action.payload
+        }
     },
     extraReducers: (builder) => {
         getAnalyticsExt(builder)
     },
 })
 
-export const {clear} = globalSlice.actions
+export const {clear,setResume} = globalSlice.actions
 export default globalSlice.reducer

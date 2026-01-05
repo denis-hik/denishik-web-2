@@ -3,6 +3,7 @@ import {useAppDispatch} from "../store/hooks";
 import {getAnalytics} from "./actions/analytic/get";
 import {useSelector} from "react-redux";
 import {resumeSelector} from "./slice/selectors";
+import {setResume} from "./slice/globalSlice";
 
 export const pageContext = createContext<{}>({});
 
@@ -14,6 +15,8 @@ const PageContextProvider: React.FC<{ children: any }> = ({children}) => {
     useEffect(() => {
         if (!localStorage.getItem("resume")) {
             dispatch(getAnalytics())
+        } else {
+            dispatch(setResume(localStorage.getItem("resume") as string))
         }
     }, []);
 
