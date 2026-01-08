@@ -1,7 +1,6 @@
 import React, {useEffect, useLayoutEffect, useMemo, useRef, useState} from 'react';
 import {gsap} from 'gsap';
-
-import './Masonry.css';
+import {MasonryContainer} from "./styled";
 
 const useMedia = (queries: string[], values: number[], defaultValue: number): number => {
     const get = () => values[queries.findIndex(q => matchMedia(q).matches)] ?? defaultValue;
@@ -52,6 +51,7 @@ interface Item {
     img: string;
     url: string;
     height: number;
+    label?: string
 }
 
 
@@ -243,7 +243,7 @@ const Masonry: React.FC<MasonryProps> = ({
     };
 
     return (
-        <div ref={containerRef} className="list">
+        <MasonryContainer ref={containerRef} className="list">
             {grid.map(item => {
                 return (
                     <div
@@ -255,6 +255,7 @@ const Masonry: React.FC<MasonryProps> = ({
                         onMouseLeave={e => handleMouseLeave(e, item)}
                     >
                         <div className="item-img" style={{backgroundImage: `url(${item.img})`}}>
+                            {!!item?.label?.length && <h1 className={"label"}>{item.label}</h1>}
                             {colorShiftOnHover && (
                                 <div
                                     className="color-overlay"
@@ -275,7 +276,7 @@ const Masonry: React.FC<MasonryProps> = ({
                     </div>
                 );
             })}
-        </div>
+        </MasonryContainer>
     );
 };
 
