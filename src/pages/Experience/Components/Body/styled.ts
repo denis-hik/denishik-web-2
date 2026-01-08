@@ -77,10 +77,18 @@ export const ExperienceBodyStyled = styled.div`
                 .date {
                     margin-top: 10px;
                 }
+                
+                .stack {
+                    display: flex;
+                    align-items: center;
+                    justify-content: right;
+                    margin-top: 1rem;
+                    gap: 1rem;
+                }
             }
             
             &.active {
-                height: 120px !important;
+                height: 10rem !important;
                 
                 .content {
                     flex: 1 1 100px;
@@ -106,8 +114,12 @@ export const ExperienceBodyStyled = styled.div`
         
         .list {
             .item {
+                img {
+                    flex: 1 0.5rem;
+                }
                 .content {
                     height: 0;
+                    padding-right: 0 !important;
                     
                     align-items: center;
                     
@@ -126,7 +138,7 @@ export const ExperienceBodyStyled = styled.div`
                 
                 
                 &.active {
-                    height: 20vh !important;
+                    height: 30vh !important;
                 }
             }
         }

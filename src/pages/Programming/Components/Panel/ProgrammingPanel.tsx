@@ -1,7 +1,9 @@
 import {ProgrammingStyled} from "./styled";
 import React, {useCallback, useMemo} from "react";
 import {
+    SiFigma,
     SiGit,
+    SiI18Next,
     SiJavascript,
     SiMaterialdesign,
     SiMui,
@@ -53,6 +55,14 @@ const icons = [{
     node: SiRedux,
     title: "MuiUI",
     href: "https://redux-toolkit.js.org"
+},{
+    node: SiI18Next,
+    title: "i18xt",
+    href: "https://www.i18next.com"
+},{
+    node: SiFigma,
+    title: "Figma",
+    href: "https://www.figma.com"
 }].map(item => ({
     ...item,
 // @ts-ignore

@@ -5,17 +5,39 @@ import React, {useCallback} from "react";
 import c from "../../../../media/logos/c.gif"
 import w from "../../../../media/logos/w.gif"
 import BlurText from "../../../../components/public/BlurText";
+import {
+    SiAxios, SiFigma, SiFirebase,
+    SiI18Next,
+    SiJavascript,
+    SiMui,
+    SiNpm,
+    SiReact,
+    SiRedux,
+    SiTypescript,
+    SiWebpack,
+    SiZod
+} from 'react-icons/si';
+import {IconType} from "react-icons";
 
-const data = [{
+type TItemExperience = {
+    name: string,
+    position: string,
+    logo: string,
+    date: string,
+    stack: IconType[]
+}
+const data:TItemExperience[] = [{
     name: "\"WEBLOCK\" LLC",
     position: "Frontend-Developer",
     logo: w,
-    date: "26.09.2023 - Untill Now"
+    date: "26.09.2023 - Untill Now",
+    stack: [SiJavascript,SiTypescript,SiReact,SiNpm,SiRedux, SiMui,SiAxios,SiWebpack,SiI18Next,SiZod]
 },{
     name: "\"Clouds Technologies LLC\"",
     position: "Frontend-Developer",
     logo: c,
-    date: "10.01.2022 - 10.08.2023"
+    date: "10.01.2022 - 10.08.2023",
+    stack: [SiJavascript,SiReact,SiRedux,SiNpm,SiAxios,SiWebpack,SiFigma,SiFirebase]
 }]
 
 export const ExperienceBody = () => {
@@ -59,6 +81,11 @@ export const ExperienceBody = () => {
                                 animateBy="letters"
                                 direction="bottom"
                             />
+                            <div className={"stack"}>
+                                {item.stack.map((Icon: any, index) => (
+                                    <Icon key={index} />
+                                ))}
+                            </div>
                         </div>
                     </GlassSurface>
                 ))}
