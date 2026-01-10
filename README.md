@@ -24,8 +24,6 @@ This repository contains the source code for a personal web presence that highli
 
 ## Screenshots
 
-*(Add paths to your screenshots or hosted images)*
-
 <p>
   <img src="/src/media/readme/start.png" width="45%" />
   <img src="/src/media/readme/equine.png" width="45%" />
