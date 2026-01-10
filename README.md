@@ -1,10 +1,40 @@
-# Denis Hik Web [[Online](https://denishik.io)]
+# denishik-web-2
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A personal portfolio and project showcase website built with a modern React stack.
 
-## Screnshots
+## Overview
 
-![s](/src/media/readme/start.png)
-![e](/src/media/readme/equine.png)
-![p](/src/media/readme/projetcs.png)
+This repository contains the source code for a personal web presence that highlights projects, experience, and skills. The application emphasizes clean typography, responsive design, and professional UX, making it suitable for CV landing pages, developer portfolios, and product showcases.
+
+## Features
+
+- Responsive layout for desktop and mobile
+- Project showcase with image previews
+- Contact and external links section
+- Modular UI components with styled-components
+- State management for structured project data
+- Clean and maintainable codebase
+
+## Tech Stack
+
+- React
+- TypeScript
+- Redux
+- styled-components
+
+## Screenshots
+
+*(Add paths to your screenshots or hosted images)*
+
+<p>
+  <img src="/src/media/readme/start.png" width="45%" />
+  <img src="/src/media/readme/equine.png" width="45%" />
+</p>
+<p>
+  <img src="/src/media/readme/projetcs.png" width="45%" />
+  <img width="45%" src="https://github.com/user-attachments/assets/f996bf28-7ef4-4963-bfa4-296533698988" />
+
+</p>
+
+
 
