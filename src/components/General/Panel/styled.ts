@@ -28,6 +28,20 @@ export const PanelStyled = styled.div`
         }
     }
     
+    &.more {
+        bottom: unset;
+        top: 100px;
+        height: 90%;
+        margin-left: 7%;
+
+        .glass-surface {
+            width: 95% !important;
+            height: 90% !important;
+        }
+
+        width: 30vh;
+    }
+    
     width: 100%;
 
     @media (min-aspect-ratio: 21/9) {

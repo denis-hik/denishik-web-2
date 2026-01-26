@@ -10,6 +10,9 @@ export const Panel: React.FunctionComponent = () => {
     const active = useMemo(() => {
         return !!routes.find((item) => location.pathname === item.path && !item.hiddenNavBar)
     },[location.pathname])
+    const activeProjects = useMemo(() => {
+        return !!routes.find((item) => location.pathname.includes("/more"))
+    },[location.pathname])
 
     useEffect(() => {
         if (!active)
@@ -31,7 +34,7 @@ export const Panel: React.FunctionComponent = () => {
     }, [active]);
 
     return (
-        <PanelStyled className={active ? 'active' : ''}>
+        <PanelStyled className={activeProjects ? "more" : active ? 'active' : ''}>
             <GlassSurface
                 mixBlendMode={"difference"}
                 borderRadius={24}

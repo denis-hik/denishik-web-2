@@ -1,7 +1,7 @@
-import start from "../../../media/projects.gif";
-import {LayeredParallaxBackground} from "../../../components/public/BachgroundParalax/BackgroundParalax";
+import start from "../../media/projects.gif";
+import {LayeredParallaxBackground} from "../../components/public/BachgroundParalax/BackgroundParalax";
 import {ProjectsPageStyled} from "./styled";
-import {ProjectsPanel} from "./Panel/ProjectsPanel";
+import {ProjectsPanel} from "./Components/Panel/ProjectsPanel";
 import React from "react";
 
 export const ProjectPage = () => {

@@ -15,9 +15,10 @@ interface CardProps extends SpotlightCardProps {
     icon?: string
     onClick?: () => void
     isBlank?: boolean
+    children?: React.ReactNode
 }
 
-export const Card = ({image, imageProps, description, icon, onClick, isBlank, ...props}: CardProps) => {
+export const Card = ({image, imageProps, description, icon, onClick, isBlank, children, ...props}: CardProps) => {
     const [hover, setHover] = React.useState(false)
 
 
@@ -59,5 +60,6 @@ export const Card = ({image, imageProps, description, icon, onClick, isBlank, ..
                 {icon}
             </div>}
         </SpotlightCard>
+        {children}
     </CardStyled>)
 }
