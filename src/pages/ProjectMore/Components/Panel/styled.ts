@@ -68,6 +68,8 @@ export const ProjectsMoreStyled = styled.div`
             flex-direction: column !important;
             
             & > div {
+                min-width: 100px !important;
+                
                 min-height: 150px;
                 max-height: 200px;
             }
