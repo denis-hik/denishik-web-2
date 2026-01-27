@@ -2,7 +2,7 @@ import {ProjectsStyled} from "./styled";
 import React, {useCallback} from "react";
 
 import block1 from "../../../../media/blocks/gumroad.441fa368006e2347c964.gif"
-import block2 from "../../../../media/blocks/projects.7d190269911fe15f0ff7.gif"
+import block2 from "../../../../media/projectsMore.gif"
 import block3 from "../../../../media/blocks/vrchat.3dc4f18d30914ef858d6.gif"
 import {Card} from "../../../../components/General/My/Card/Card";
 import {Portal} from "../../../../components/General/Portal/Portal";
@@ -51,7 +51,11 @@ export const ProjectsPanel: React.FC<ProgrammingBlockProps> = () => {
                             description={item.description}
                             isBlank={item.href.includes("https://")}
                             imageProps={{
-                                baseImageSrc: "#000"
+                                baseImageSrc: "#000",
+                                ...(item?.href === data[2].href ? {
+                                    overlayHeight: "250%",
+                                    overlayWidth: "250%"
+                                } : {})
                             }}
                             onClick={onClick(index)}
                         />
