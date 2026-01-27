@@ -8,7 +8,7 @@ export const Panel: React.FunctionComponent = () => {
     const location = useLocation()
 
     const active = useMemo(() => {
-        return !!routes.find((item) => location.pathname === item.path && !item.hiddenNavBar)
+        return !!routes.find((item) => (location.pathname === item.path && !item.hiddenNavBar) || (location.pathname === item.path && !!item.forceFullPanel))
     },[location.pathname])
 
     useEffect(() => {

@@ -6,7 +6,7 @@ import c from "../../../../media/logos/c.gif"
 import w from "../../../../media/logos/w.gif"
 import BlurText from "../../../../components/public/BlurText";
 import {
-    SiAxios, SiFigma, SiFirebase,
+    SiAxios, SiFigma, SiFirebase, SiGitlab,
     SiI18Next,
     SiJavascript,
     SiMui,
@@ -31,13 +31,13 @@ const data:TItemExperience[] = [{
     position: "Frontend-Developer",
     logo: w,
     date: "26.09.2023 - Untill Now",
-    stack: [SiJavascript,SiTypescript,SiReact,SiNpm,SiRedux, SiMui,SiAxios,SiWebpack,SiI18Next,SiZod]
+    stack: [SiJavascript,SiTypescript,SiReact,SiNpm,SiRedux, SiMui,SiAxios,SiWebpack,SiI18Next,SiZod,SiGitlab]
 },{
     name: "\"Clouds Technologies LLC\"",
     position: "Frontend-Developer",
     logo: c,
     date: "10.01.2022 - 10.08.2023",
-    stack: [SiJavascript,SiReact,SiRedux,SiNpm,SiAxios,SiWebpack,SiFigma,SiFirebase]
+    stack: [SiJavascript,SiReact,SiRedux,SiNpm,SiAxios,SiWebpack,SiFigma,SiFirebase,SiGitlab]
 }]
 
 export const ExperienceBody = () => {
