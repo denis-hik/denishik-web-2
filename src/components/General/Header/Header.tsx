@@ -11,7 +11,7 @@ export const Header = () => {
     const navigate = useNavigate()
 
     const active = useMemo(() => {
-        return !!routes.find((item) => location.pathname === item.path && !item.hiddenNavBar)
+        return !!routes.find((item) => (location.pathname === item.path && !item.hiddenNavBar) || !!item.forceFullPanel)
     },[location.pathname])
 
     const [show, setShow] = useState(true)
@@ -65,7 +65,6 @@ export const Header = () => {
                 </div>
                 <div className={"logo1"} />
             </GlassSurface>
-
         </HeaderStyled>
     )
 }

@@ -54,7 +54,21 @@ export const PanelStyled = styled.div`
         }
     }
     
+    &:has(.more) {
+        &.active {
+            top: 93vh;
+            height: 50%;
+        }
+    }
+    
     @media (max-width: 767px) {
+
+        &:has(.more) {
+            &.active {
+                height: 100%;
+            }
+        }
+        
         .glass-surface {
             min-width: unset;
             transition: all 0.3s ease-in-out;

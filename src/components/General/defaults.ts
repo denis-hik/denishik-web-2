@@ -10,6 +10,7 @@ import {ProjectMorePage} from "../../pages/ProjectMore/ProjectMorePage";
 type TRoute = {
     path: string;
     component: React.FC;
+    forceFullPanel?: true,
 } & Omit<GooeyNavItem, "href">
 
 export const routes: TRoute[] = [{
@@ -38,5 +39,6 @@ export const routes: TRoute[] = [{
     path: "/more",
     label: "More",
     hiddenNavBar: true,
+    forceFullPanel: true,
     component: ProjectMorePage
 }]

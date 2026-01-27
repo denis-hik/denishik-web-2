@@ -10,32 +10,41 @@ export const ProjectsMoreStyled = styled.div`
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    
-    .list {
+    .container {
         display: flex;
-        flex-direction: column;
+        overflow: hidden;
         padding-top: 5vh;
         padding-bottom: 20px;
-        align-items: center;
-        gap: 20px;
-        width: calc(100% - 16px);
-        height: 100%;
-        border-radius: 4px;
+        width: 100%;
         
-        overflow: auto;
-
-        & > div {
-            min-height: 150px;
-            max-height: 200px;
-        }
-        
-        .stack {
-            position: absolute;
-            top: 1vh;
-            right: 1vh;
-            
+        .list {
             display: flex;
-            gap: 10px;
+            flex-direction: row;
+            align-items: center;
+            gap: 20px;
+            width: 100%;
+            height: 100%;
+            border-radius: 4px;
+
+            overflow: auto;
+            padding-left: 10px;
+            padding-right: 10px;
+
+            & > div {
+                min-height: 290px;
+                max-height: 400px;
+                
+                min-width: 450px;
+            }
+
+            .stack {
+                position: absolute;
+                top: 2vh;
+                right: 2vh;
+
+                display: flex;
+                gap: 10px;
+            }
         }
     }
     
@@ -48,6 +57,21 @@ export const ProjectsMoreStyled = styled.div`
     
     &.active {
         opacity: 1;
+    }
+
+
+
+    @media (max-width: 767px) {
+        .list {
+            padding-right: 0;
+            padding-left: 0px !important;
+            flex-direction: column !important;
+            
+            & > div {
+                min-height: 150px;
+                max-height: 200px;
+            }
+        }
     }
     
 `

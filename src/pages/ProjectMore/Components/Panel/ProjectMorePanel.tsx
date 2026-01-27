@@ -17,7 +17,7 @@ const projectsData: TProjectItem[] = [{
     name: "vrchat-web-2",
     description: "",
     stack: [SiJavascript,SiReact,],
-    images: ["https://private-user-images.githubusercontent.com/41349289/534244342-9e07bf3a-844e-4600-bf59-fc1aaea19cec.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Njk0MzI0ODAsIm5iZiI6MTc2OTQzMjE4MCwicGF0aCI6Ii80MTM0OTI4OS81MzQyNDQzNDItOWUwN2JmM2EtODQ0ZS00NjAwLWJmNTktZmMxYWFlYTE5Y2VjLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjAxMjYlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwMTI2VDEyNTYyMFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTgzMzljM2I3ZWYxZWQ1NmZiMTVjYTcxNjI1ZGE3NWVjODE2MDUyZGE0OThjODJmOTgxNWUxZDQ4N2U3N2VjNjYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.qesYLD3oPVEygD8Nka8cOM3L9DVB5cfeoKxRhfItUlU"],
+    images: ["https://github.com/user-attachments/assets/9e07bf3a-844e-4600-bf59-fc1aaea19cec"],
     url: "https://github.com/denis-hik/vrchat-web-2"
 },{
     name: "SC Android",
@@ -35,7 +35,7 @@ const projectsData: TProjectItem[] = [{
     name: "VRCatApp-IOS",
     description: "",
     stack: [SiSwift],
-    images: ["https://private-user-images.githubusercontent.com/41349289/534241406-960fd934-5b63-4546-a998-eaba0b6ec854.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Njk0MzIzOTcsIm5iZiI6MTc2OTQzMjA5NywicGF0aCI6Ii80MTM0OTI4OS81MzQyNDE0MDYtOTYwZmQ5MzQtNWI2My00NTQ2LWE5OTgtZWFiYTBiNmVjODU0LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjAxMjYlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwMTI2VDEyNTQ1N1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTQxMzZlZDllMDZiZjUwNTI3MWUwZDFhMzAwNGUyMDdlNDAyNjczZGIyOTRlODc4OWQ4ZWM3MjgyMjcyMjM3ZGQmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.-I7HNhJti6nmZAt-hudgPwmo1-XQqsOyixFX56cJV50"],
+    images: ["https://github.com/user-attachments/assets/960fd934-5b63-4546-a998-eaba0b6ec854"],
     url: "https://github.com/denis-hik/VRCatApp-IOS"
 },{
     name: "Wood Resin Table",
@@ -56,23 +56,25 @@ export const ProjectsMorePanel = () => {
     return (
         <Portal id={"panel-glass"}>
             <ProjectsMoreStyled className={"active"}>
-                <div className={"list"}>
-                    {projectsData.map((item, index) => (
-                        <Card
-                            key={index}
-                            image={item.images[0]}
-                            description={item.name}
-                            isBlank={item.url.includes("https://")}
-                            imageProps={{
-                                baseImageSrc: "#000"
-                            }}
-                            onClick={() => onClick(index)}
-                        >
-                            <div className={"stack"}>
-                                {item.stack.map((Item: any, index) => <Item key={index}  />)}
-                            </div>
-                        </Card>
-                    ))}
+                <div className={"container more"}>
+                    <div className={"list"}>
+                        {projectsData.map((item, index) => (
+                            <Card
+                                key={index}
+                                image={item.images[0]}
+                                description={item.name}
+                                isBlank={item.url.includes("https://")}
+                                imageProps={{
+                                    baseImageSrc: "#000"
+                                }}
+                                onClick={() => onClick(index)}
+                            >
+                                <div className={"stack"}>
+                                    {item.stack.map((Item: any, index) => <Item key={index}  />)}
+                                </div>
+                            </Card>
+                        ))}
+                    </div>
                 </div>
             </ProjectsMoreStyled>
         </Portal>
