@@ -6,10 +6,13 @@ import {SiAndroid, SiCplusplus, SiJavascript, SiReact, SiSketchfab, SiSwift} fro
 import type {IconType} from "react-icons";
 import {FaJava} from "react-icons/fa";
 
+import m from "../../../../media/M.png"
+import vrc from "../../../../media/vrchat.png"
+
 type TProjectItem = {
     name: string
     description: string
-    stack: (IconType)[]
+    stack: (IconType | string)[]
     images: string[]
     url: string
 }
@@ -38,12 +41,22 @@ const projectsData: TProjectItem[] = [{
     images: ["https://github.com/user-attachments/assets/960fd934-5b63-4546-a998-eaba0b6ec854"],
     url: "https://github.com/denis-hik/VRCatApp-IOS"
 },{
+    name: "Mountain Room",
+    description: "",
+    stack: ["vrchat"],
+    images: [m],
+    url: "https://vrchat.com/home/world/wrld_19283481-2419-47c9-91aa-5f4977e0dbb3/info"
+},{
     name: "Wood Resin Table",
     description: "",
     stack: [SiSketchfab],
     images: ["https://media.sketchfab.com/models/8d9542eb68154a63a460ddd4b38b1b62/thumbnails/b002dcfcc2c9465e97ff5bc89a3f5e33/761c3f46b07f48689d1a18164849dfc1.jpeg"],
     url: "https://sketchfab.com/3d-models/wood-resin-table-8d9542eb68154a63a460ddd4b38b1b62"
 }]
+
+const Icons =  (props: React.DetailedHTMLProps<React.ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement>): Record<string, any>  => ({
+    "vrchat": <img src={vrc} {...props} />
+})
 
 export const ProjectsMorePanel = () => {
 
@@ -70,7 +83,16 @@ export const ProjectsMorePanel = () => {
                                 onClick={() => onClick(index)}
                             >
                                 <div className={"stack"}>
-                                    {item.stack.map((Item: any, index) => <Item key={index}  />)}
+                                    {item.stack.map((Item: any, index) => {
+                                        if (typeof (Item) === "string")
+                                            return Icons({
+                                                width: 30,
+                                                height: 15,
+                                                style: {objectFit: "contain"}
+                                            })[Item]
+
+                                        return <Item key={index}/>
+                                    })}
                                 </div>
                             </Card>
                         ))}
