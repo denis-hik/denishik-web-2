@@ -5,8 +5,8 @@ export const EquinePanelStyled = styled.div`
     height: 100%;
     display: block;
     
-    .item-wrapper {
-        
+    & > div {
+        overflow: auto;
     }
     *, :before, :after {
         box-sizing: border-box;
