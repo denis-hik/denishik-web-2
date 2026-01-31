@@ -11,7 +11,7 @@ export const Header = () => {
     const navigate = useNavigate()
 
     const active = useMemo(() => {
-        return !!routes.find((item) => (location.pathname === item.path && !item.hiddenNavBar) || !!item.forceFullPanel)
+        return !!routes.find((item) => (location.pathname === item.path && !item.hiddenNavBar) || (location.pathname === item.path && !!item.forceFullPanel))
     },[location.pathname])
 
     const [show, setShow] = useState(true)

@@ -37,6 +37,13 @@ export const NavBarStyled = styled.div `
                 height: 100%;
                 display: flex !important;
                 align-items: center;
+                transition: padding-bottom, padding-left, padding-right, padding-top 0.3s ease;
+                padding: 0 !important;
+            }
+
+
+            &.active a {
+                padding: 8px 16px !important;
             }
         }
     }
