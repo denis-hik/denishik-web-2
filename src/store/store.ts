@@ -1,9 +1,11 @@
 import {configureStore} from '@reduxjs/toolkit'
 import globalSlice from "../context/slice/globalSlice";
+import settingsSlice from "../context/slice/settingsSlice";
 
 export const store = configureStore({
     reducer: {
-        global: globalSlice
+        global: globalSlice,
+        settings: settingsSlice
     },
     middleware: (getDefaultMiddleware) =>
         getDefaultMiddleware({

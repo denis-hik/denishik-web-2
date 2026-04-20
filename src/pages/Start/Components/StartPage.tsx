@@ -4,19 +4,21 @@ import {StartPageStyled} from "./styled";
 import {useCallback, useState} from "react";
 import {Motion} from "./Motion/Motion";
 import {Label} from "./Label/LabelStartPage";
+import {useTranslate} from "../../../hooks/useTranslate";
 
 export const StartPage = () => {
     const [requestMotion, setRequestMotion] = useState<null | (() => Promise<boolean>)>(null);
+    const t = useTranslate();
 
     const handleMotion = useCallback(async () => {
         if (requestMotion) {
             const ok = await requestMotion();
             if (!ok) {
-                alert("Motion failed.");
+                alert(t("start.motionFailed"));
             }
             setRequestMotion(null);
         }
-    }, [requestMotion])
+    }, [requestMotion, t])
 
     return (
         <StartPageStyled className={"scrl"}>

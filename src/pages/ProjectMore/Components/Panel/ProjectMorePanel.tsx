@@ -2,7 +2,7 @@ import React, {useCallback} from "react";
 import {Portal} from "../../../../components/General/Portal/Portal";
 import {Card} from "../../../../components/General/My/Card/Card";
 import {ProjectsMoreStyled} from "./styled";
-import {SiAndroid, SiCplusplus, SiJavascript, SiReact, SiSketchfab, SiSwift} from "react-icons/si";
+import {SiAndroid, SiCplusplus, SiJavascript, SiReact, SiSketchfab, SiSwift, SiUnity} from "react-icons/si";
 import type {IconType} from "react-icons";
 import {FaJava} from "react-icons/fa";
 
@@ -28,6 +28,12 @@ const projectsData: TProjectItem[] = [{
     stack: [FaJava, SiAndroid],
     images: ["https://github.com/denis-hik/SC-Android/blob/master/screens/photo0.jpg?raw=true"],
     url: "https://github.com/denis-hik/SC-Android"
+},{
+    name: "SC Quest VR",
+    description: "",
+    stack: [FaJava, SiAndroid,SiUnity],
+    images: ["https://private-user-images.githubusercontent.com/41349289/571028984-4834112e-44af-42ec-a84f-ac0961587760.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzUyOTcwNTgsIm5iZiI6MTc3NTI5Njc1OCwicGF0aCI6Ii80MTM0OTI4OS81NzEwMjg5ODQtNDgzNDExMmUtNDRhZi00MmVjLWE4NGYtYWMwOTYxNTg3NzYwLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjA0MDQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwNDA0VDA5NTkxOFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWUwYTk0N2I0N2JjNDU1NjE4ZTk1Y2RhNzllNWI5NDMyOGFkMzUzMjdkMTIwYzE5NWQ1NTAzZDFkNTQ4OGJlMTkmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.1b0OqB-O_Nr0L8hGhvPZHjfqbGl0P5I23HQk3c82r9I"],
+    url: "https://github.com/denis-hik/SC-VR-Android"
 },{
     name: "SC-Led-Ardruino",
     description: "",

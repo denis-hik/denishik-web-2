@@ -1,0 +1,30 @@
+{
+  "translation": {
+    "nav": {
+      "start": "Start",
+      "programming": "Programming",
+      "equine": "Horse riding",
+      "projects": "Projects",
+      "experience": "Experience",
+      "more": "More"
+    },
+    "start": {
+      "tagline": "Ideas. Motion. Progress.",
+      "motionFailed": "Motion failed."
+    },
+    "programming": {
+      "cards": {
+        "experience": "Experience",
+        "cv": "CV"
+      }
+    },
+    "projects": {
+      "more": "More"
+    },
+    "experience": {
+      "frontendDeveloper": "Frontend Developer",
+      "currentRange": "26 Sep 2023 - Present",
+      "previousRange": "10 Jan 2022 - 10 Aug 2023"
+    }
+  }
+}

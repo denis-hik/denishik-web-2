@@ -18,7 +18,7 @@ export const Header = () => {
 
     const onStart = useCallback(() => {
         navigate("/")
-    }, [])
+    }, [navigate])
 
     useEffect(() => {
         const threshold = 0.9;
@@ -52,7 +52,7 @@ export const Header = () => {
                 fallbackOnly
             >
                 <div className={"logo"}>
-                    <img src={logo} onClick={onStart} />
+                    <img src={logo} alt={"Denis Hik"} onClick={onStart} />
                 </div>
                 <div className={"text"}>
                     <DecryptedText

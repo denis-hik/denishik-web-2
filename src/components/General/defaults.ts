@@ -11,33 +11,40 @@ type TRoute = {
     path: string;
     component: React.FC;
     forceFullPanel?: true,
+    labelKey: string;
 } & Omit<GooeyNavItem, "href">
 
 export const routes: TRoute[] = [{
     path: "*",
-    label: "Start",
+    label: "",
+    labelKey: "nav.start",
     hiddenNavBar: true,
     component: StartPage
 },{
     path: "/programming",
-    label: "Programming",
+    label: "",
+    labelKey: "nav.programming",
     component: ProgrammingPage
 },{
     path: "/equine",
-    label: "Horse riding",
+    label: "",
+    labelKey: "nav.equine",
     component: EquinePage
 },{
     path: "/projects",
-    label: "Projects",
+    label: "",
+    labelKey: "nav.projects",
     component: ProjectPage
 },{
     path: "/experience",
-    label: "Experience",
+    label: "",
+    labelKey: "nav.experience",
     hiddenNavBar: true,
     component: ExperiencePage
 },{
     path: "/more",
-    label: "More",
+    label: "",
+    labelKey: "nav.more",
     hiddenNavBar: true,
     forceFullPanel: true,
     component: ProjectMorePage

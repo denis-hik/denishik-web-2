@@ -1,0 +1,30 @@
+{
+  "translation": {
+    "nav": {
+      "start": "Бастау",
+      "programming": "Бағдарламалау",
+      "equine": "Атқа міну",
+      "projects": "Жобалар",
+      "experience": "Тәжірибе",
+      "more": "Тағы"
+    },
+    "start": {
+      "tagline": "Идеялар. Қозғалыс. Прогресс.",
+      "motionFailed": "Қозғалыс рұқсатын іске қосу мүмкін болмады."
+    },
+    "programming": {
+      "cards": {
+        "experience": "Тәжірибе",
+        "cv": "Түйіндеме"
+      }
+    },
+    "projects": {
+      "more": "Тағы"
+    },
+    "experience": {
+      "frontendDeveloper": "Frontend әзірлеуші",
+      "currentRange": "26 қыр 2023 - Қазір",
+      "previousRange": "10 қаң 2022 - 10 там 2023"
+    }
+  }
+}

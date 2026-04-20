@@ -1,0 +1,30 @@
+{
+  "translation": {
+    "nav": {
+      "start": "Старт",
+      "programming": "Программирование",
+      "equine": "Верховая езда",
+      "projects": "Проекты",
+      "experience": "Опыт",
+      "more": "Ещё"
+    },
+    "start": {
+      "tagline": "Идеи. Движение. Прогресс.",
+      "motionFailed": "Не удалось включить движение."
+    },
+    "programming": {
+      "cards": {
+        "experience": "Опыт",
+        "cv": "Резюме"
+      }
+    },
+    "projects": {
+      "more": "Ещё"
+    },
+    "experience": {
+      "frontendDeveloper": "Frontend-разработчик",
+      "currentRange": "26 сен 2023 - Сейчас",
+      "previousRange": "10 янв 2022 - 10 авг 2023"
+    }
+  }
+}

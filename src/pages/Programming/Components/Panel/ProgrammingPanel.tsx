@@ -22,6 +22,7 @@ import img1 from "../../../../media/experience.gif"
 import img3 from "../../../../media/blocks/CV.gif"
 import {useSelector} from "react-redux";
 import {resumeSelector} from "../../../../context/slice/selectors";
+import {useTranslate} from "../../../../hooks/useTranslate";
 
 const icons = [{
     node: SiReact,
@@ -73,13 +74,14 @@ const icons = [{
 
 export const ProgrammingPanel = () => {
     const navigate = useNavigate();
+    const t = useTranslate();
 
     const resume = useSelector(resumeSelector)
 
     const data = useMemo(() => [{
-        label: "Experience",
+        label: t("programming.cards.experience"),
         image: img1,
-        description: "Experience",
+        description: t("programming.cards.experience"),
         href: "/experience"
     },{
         label: "GitHub",
@@ -88,12 +90,12 @@ export const ProgrammingPanel = () => {
         href: "https://github.com/denis-hik"
     },
     ...(!!resume?.length ? [{
-        label: "CV",
+        label: t("programming.cards.cv"),
         image: img3,
-        description: "CV",
+        description: t("programming.cards.cv"),
         href: resume
     }] : [])
-    ], [resume])
+    ], [resume, t])
 
     const onClickCard = useCallback((index: number) => () => {
         const item = data[index]
@@ -105,7 +107,7 @@ export const ProgrammingPanel = () => {
         }
 
         !!item?.href?.length && navigate(item.href);
-    }, [])
+    }, [data, navigate])
 
     const onClickLogo = useCallback((item: LogoItem) => {
         !!item?.href?.length && window.open(item.href, "_blank");
@@ -142,4 +144,3 @@ export const ProgrammingPanel = () => {
         </Portal>
     )
 }
-

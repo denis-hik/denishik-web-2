@@ -18,6 +18,7 @@ import {
     SiZod
 } from 'react-icons/si';
 import {IconType} from "react-icons";
+import {useTranslate} from "../../../../hooks/useTranslate";
 
 type TItemExperience = {
     name: string,
@@ -26,22 +27,24 @@ type TItemExperience = {
     date: string,
     stack: IconType[]
 }
-const data:TItemExperience[] = [{
-    name: "\"WEBLOCK\" LLC",
-    position: "Frontend-Developer",
-    logo: w,
-    date: "26.09.2023 - Untill Now",
-    stack: [SiJavascript,SiTypescript,SiReact,SiNpm,SiRedux, SiMui,SiAxios,SiWebpack,SiI18Next,SiZod,SiGitlab]
-},{
-    name: "\"Clouds Technologies LLC\"",
-    position: "Frontend-Developer",
-    logo: c,
-    date: "10.01.2022 - 10.08.2023",
-    stack: [SiJavascript,SiReact,SiRedux,SiNpm,SiAxios,SiWebpack,SiFigma,SiFirebase,SiGitlab]
-}]
 
 export const ExperienceBody = () => {
     const [show, setShow] = React.useState<number>();
+    const t = useTranslate();
+
+    const data:TItemExperience[] = [{
+        name: "\"WEBLOCK\" LLC",
+        position: t("experience.frontendDeveloper"),
+        logo: w,
+        date: t("experience.currentRange"),
+        stack: [SiJavascript,SiTypescript,SiReact,SiNpm,SiRedux, SiMui,SiAxios,SiWebpack,SiI18Next,SiZod,SiGitlab]
+    },{
+        name: "\"Clouds Technologies LLC\"",
+        position: t("experience.frontendDeveloper"),
+        logo: c,
+        date: t("experience.previousRange"),
+        stack: [SiJavascript,SiReact,SiRedux,SiNpm,SiAxios,SiWebpack,SiFigma,SiFirebase,SiGitlab]
+    }]
 
     const onClick = useCallback((index: number) => () => {
         setShow(prevState => prevState === index ? -1 : index)
